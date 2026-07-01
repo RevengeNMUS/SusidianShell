@@ -2,7 +2,7 @@
 MMMM="$(dirname -- "$0")"
 echo "Super duper uber mega secret dir: ${MMMM}/susidian_stuffs.sh (:0000000)"
 source "${MMMM}/susidian_stuffs.sh"
-if [$CD == ""] || [$URL == ""]
+if [ "$CD" == "" ] || [ "$URL" == "" ]
 then
 echo "SET THE STUFF IN THE FILE :0"
 exit 67
@@ -18,21 +18,21 @@ git switch -c main
 while getopts "eim:" arg; do
     case $arg in
         m)
-        git pull $URL main
+        git pull "$URL" main
         git add .
         git commit -m "$OPTARG ($(date +%Y-%m-%d))"
         git push -u $URL main
         echo "such PUSHHHH (rly commited to the bit waw)! :DDDDDDD with message ${OPTARG} ($(date +%Y-%m-%d))"
         ;;
         i)
-        git pull $URL main
+        git pull "$URL" main
         echo "such PULLLLL (unlike the huzz)! :DDDDDDD"
         ;;
         e)
-        git pull $URL main
+        git pull "$URL" main
         git add .
         git commit -m "UPDATE :D ($(date +%Y-%m-%d))"
-        git push -u $URL main
+        git push -u "$URL" main
         echo "such PUSHHHH (rly commited to the bit waw)! :DDDDDDD"
         ;;
         \?) 
