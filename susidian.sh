@@ -20,9 +20,9 @@ while getopts "eim:" arg; do
         m)
         git pull $URL main
         git add .
-        git commit -m "$OPTARG"
+        git commit -m "$OPTARG ($(date +%Y-%m-%d))"
         git push -u $URL main
-        echo "such PUSHHHH (rly commited to the bit waw)! :DDDDDDD with message ${OPTARG}"
+        echo "such PUSHHHH (rly commited to the bit waw)! :DDDDDDD with message ${OPTARG} ($(date +%Y-%m-%d))"
         ;;
         i)
         git pull $URL main
@@ -31,7 +31,7 @@ while getopts "eim:" arg; do
         e)
         git pull $URL main
         git add .
-        git commit -m "UPDATE :D"
+        git commit -m "UPDATE :D ($(date +%Y-%m-%d))"
         git push -u $URL main
         echo "such PUSHHHH (rly commited to the bit waw)! :DDDDDDD"
         ;;
