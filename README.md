@@ -22,6 +22,10 @@ just run the shell (if you open powershell on windows, you can just find the dir
 
 if you used the batman method, you can simply run it from cmd, using "susidian -\[thingymabop\]" to do things :D
 ***
+## WARNING
+this MAy delete your obisidan vault (happened to me twice while debugging </3) SO KEEP A BACKUP until the first upload. Then use that as a fallback in case anything happens :P MEhehehehehehheheheh
+
+***
 ## Abraham Lincoln
 Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
 
