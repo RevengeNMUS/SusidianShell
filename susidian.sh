@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-MMMM="$(dirname -- "$0")"
+MMMM=$(cd "$(dirname "$0")" && pwd)
 echo "Super duper uber mega secret dir: ${MMMM}/susidian_stuffs.sh (:0000000)"
 source "${MMMM}/susidian_stuffs.sh"
 if [ "$CD" == "" ] || [ "$URL" == "" ]
@@ -13,7 +13,10 @@ echo "Current Working Directory (if it isnt obsidian youre so screwed you rat :D
 cd
 cd "$CD"
 git init
-git switch -c main
+
+echo "passed init feleing kinda cute might explode later"
+git switch main 2>/dev/null || git switch -c main
+echo  $(git branch --show-current)
 
 while getopts "eim:" arg; do
     case $arg in
